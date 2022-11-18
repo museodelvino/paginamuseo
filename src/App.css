@@ -1,38 +1,78 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.cabeza {
+    background-color:#820000;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.cabeza .logoYTitulo {
+    display:inline-flex;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logoCabeza {
+    width: 65px;
+    height: 90px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.tituloCabeza {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    margin-left: 15px;
+    font-family: "Gilda Display", sans-serif;
+    margin-top: 28px;
 }
 
-.App-link {
-  color: #61dafb;
+.cabeza ul {
+    display: flex;
+    flex-direction: row;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cabeza ul li {
+    margin: 20px;
+}
+
+.cabeza ul li a {
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-family: Roboto, sans-serif;
+    padding: 10px;
+}
+
+/* .cabeza .iconoCarrito {
+    color: white;
+    width: 35px;
+    height: 35px;
+} */
+
+.cabeza div button {
+    color: white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+    
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    background-color: inherit;
+    border: none;
+}
+
+.cabeza div button p {
+    font-size: 24px;
+}
+
+.cabeza div button svg {
+    width: 50px;
+    height: 50px;
 }
