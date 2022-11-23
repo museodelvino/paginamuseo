@@ -76,3 +76,49 @@
     width: 50px;
     height: 50px;
 }
+
+.App .background Header {
+    background-color: whitesmoke;
+}
+
+.logo {
+    width: 55px;
+    height: 90px;
+}
+
+.titulo {
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(17, 1, 1);
+}
+
+.tituloInicio {
+    margin-bottom: 50px;
+}
+
+.parrafoInicio {
+    margin-bottom: 50px;
+}
+
+.frecuent-questions {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+
+.tituloPreguntasFrecuentes {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.collapsible {
+    max-width: 1050px;
+}
+
+.collapsible div {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 20px;
+}
+

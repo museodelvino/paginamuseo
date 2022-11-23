@@ -90,7 +90,7 @@ export default function Header() {
         <div className="flex items-center justify-between border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="#">
-              <span className="sr-only">Your Company</span>
+              <span className="sr-only">El Faro Bistró</span>
               <img
                 className="h-8 w-auto sm:h-10"
                 src="https://naurua.com/img/el-faro-bistro-logo.jpg"
@@ -105,6 +105,9 @@ export default function Header() {
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>
           </div>
+          <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
+            Inicio
+          </a>
           <Popover.Group as="nav" className="hidden space-x-10 md:flex">
             <Popover className="relative">
               {({ open }) => (
@@ -115,7 +118,7 @@ export default function Header() {
                       'group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
                     )}
                   >
-                    <span>Solutions</span>
+                    <span>Productos</span>
                     <ChevronDownIcon
                       className={classNames(
                         open ? 'text-gray-600' : 'text-gray-400',
@@ -171,14 +174,12 @@ export default function Header() {
               )}
             </Popover>
 
+
             <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
-              Pricing
-            </a>
-            <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
-              Docs
+              Contacto
             </a>
 
-            <Popover className="relative">
+            {/* <Popover className="relative">
               {({ open }) => (
                 <>
                   <Popover.Button
@@ -248,7 +249,7 @@ export default function Header() {
                   </Transition>
                 </>
               )}
-            </Popover>
+            </Popover> */}
           </Popover.Group>
         </div>
       </div>
