@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { PRODUCTS } from "../data/products"
+import Loader from "./Loader"
 import WineCard from "./WineCard"
 
 const ItemListContainer = () => {
@@ -19,12 +20,13 @@ const ItemListContainer = () => {
     return new Promise( (resolve, reject) => {
         setTimeout(() => {
           resolve( PRODUCTS )
-        }, 500);
+        }, 3000);
     })
   }
 
   return (
     <div className="item-list-container">
+        <Loader loading={ items.length === 0 } />
         { items.map( i => <WineCard key={i.id} {...i}/> ) }
     </div>
   )

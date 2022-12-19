@@ -134,12 +134,17 @@ export default function NavBar() {
                 <div className="space-y-6 border-t border-gray-200 py-6 px-4">
                   <div className="flow-root">
                     <a href="#" className="-m-2 block p-2 font-medium text-gray-900">
-                      Sign in
+                      Inicio
                     </a>
                   </div>
                   <div className="flow-root">
                     <a href="#" className="-m-2 block p-2 font-medium text-gray-900">
-                      Create account
+                      Productos
+                    </a>
+                  </div>
+                  <div className="flow-root">
+                    <a href="#" className="-m-2 block p-2 font-medium text-gray-900">
+                      Contacto
                     </a>
                   </div>
                 </div>
@@ -147,11 +152,11 @@ export default function NavBar() {
                 <div className="border-t border-gray-200 py-6 px-4">
                   <a href="#" className="-m-2 flex items-center p-2">
                     <img
-                      src="https://tailwindui.com/img/flags/flag-canada.svg"
+                      src="https://cdn-icons-png.flaticon.com/512/197/197573.png"
                       alt=""
                       className="block h-auto w-5 flex-shrink-0"
                     />
-                    <span className="ml-3 block text-base font-medium text-gray-900">CAD</span>
+                    <span className="ml-3 block text-base font-medium text-gray-900">Mendoza, Argentina</span>
                     <span className="sr-only">, change currency</span>
                   </a>
                 </div>

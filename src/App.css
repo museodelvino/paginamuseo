@@ -132,6 +132,7 @@
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .item-list-container .wine-card {
@@ -151,4 +152,12 @@
 
 .counter {
     margin-top: 40px;
+}
+
+.product-title {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 36px;
+    text-align: center;
+    margin: 5vh 0;
+    font-weight: bold;
 }

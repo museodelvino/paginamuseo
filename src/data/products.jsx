@@ -17,7 +17,7 @@ const PRODUCTS = [
         imageAlt: "",
         price: '$1100',
         stock: 7,
-        description: 'Ideal para beber junto a un postre dulce y quesos frescos.',
+        description: 'Ideal para beber junto a un postre y quesos frescos.',
       },
       {
         id: 3,
@@ -47,7 +47,7 @@ const PRODUCTS = [
         imageAlt: "",
         price: '$1800',
         stock: 32,
-        description: "Ideal para beber junto a un postre dulce. Combinar para mejor con comidas de bajo nivel graso. Maridaje equilibrado para comer sushi.",
+        description: "Ideal para beber junto a un postre. Combinar para mejor con comidas de bajo nivel graso. Maridaje equilibrado para comer sushi.",
       },
   ]
 
