@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom"
 import { PRODUCTS } from "../data/products"
 import { Counter } from "./Counter"
 import { StarIcon } from '@heroicons/react/20/solid'
+import { useCart } from "./context/CartContext"
+
 
 const reviews = { href: '#', average: 4, totalCount: 117 }
   
@@ -14,6 +16,9 @@ const ItemDetailContainer = () => {
 
   const [item, setItem] = useState({})
   const { id } = useParams()
+
+  // const darkmode = useContext(CartContext)
+  const { addToCart } = useCart()
 
   useEffect(() => {
     getItemDetail().then( res => {
@@ -29,9 +34,14 @@ const ItemDetailContainer = () => {
       }, 500);
     })
   }
+
+  const addHandler = () => {
+    addToCart( id )
+  }
   
     return (
       <div className="bg-white">
+        {/* <p className="text-xl">Darkmode {darkmode ? "on" : "off"}</p> */}
         <div className="pt-6">
           
           {/* Image gallery */}
@@ -85,6 +95,7 @@ const ItemDetailContainer = () => {
                 <button
                   type="submit"
                   className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                  onClick={addHandler}
                 >
                   Agregar al carrito
                 </button>
