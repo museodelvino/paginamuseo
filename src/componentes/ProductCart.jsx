@@ -1,56 +1,9 @@
 import { useCart } from "./context/CartContext"
-import { getFirestore, collection, addDoc, doc, updateDoc, writeBatch } from "firebase/firestore"
 
 const ProductCart = () => {
 
   const { items, clearCart } = useCart()
 
-  const makeOrder = () => {
-    const user = {name: 'Ana', phone: 213213421, email: 'juan@gmail.com'}
-    const order = {
-      buyer: user,
-      items: items
-    }
-    console.log('Levantando la order: ', order);
-    saveOrder( order )
-  }
-
-  const saveOrder = async ( order ) => {
-    const db = getFirestore()
-    const orderCollection = collection(db, 'orders')
-    const {id} = await addDoc( orderCollection, order)
-    console.log('Nueva orden: ', id);
-  }
-
-  const editOrder = ( id ) => {
-    const db = getFirestore()
-    const orderDoc = doc(db, 'orders', id)
-    updateDoc(orderDoc,{
-      buyer: {
-        name: 'Florencia',
-        phone: 7777888888,
-        email: 'florencia@gmail.com'},
-      total: 250
-      }).then( res => { console.log(res); })
-  }
-
-  const editOrderHandler = () => {
-    editOrder('4mHXyy3sGdDe6bQ4MjUz')
-  }
-
-  const makeBatch = () => {
-    const db = getFirestore()
-    
-    const order1 = doc(db, 'orders', '3ZZ3kZjF9xsDzFy0KeZU')
-    const order2 = doc(db, 'orders', 'TwWUC4SG8FwYjHeMm3RG')
-
-    const batch = writeBatch( db )
-
-    batch.update(order1, { total: 77})
-    batch.update(order2, { total: 44})
-
-    batch.commit()
-  }
 
   return (
     <div className="m-10 text-xl">
@@ -62,11 +15,8 @@ const ProductCart = () => {
         :
         <h1>Estos son tus items:</h1>
       }
-      <div>{ items.map( i => <li key={i}>{i}</li> ) }</div>
+      <div>{ items.map( i => <li key={i}>Nombre: {i.name} - Precio: {i.price} - Cantidad: {i.quantity}</li>)}</div>
       <button className="btn" onClick={clearCart}>Vaciar carrito</button>
-      <button className="btn" onClick={makeOrder}>Comprar</button>
-      <button className="btn" onClick={editOrderHandler}>Actualizar Orden</button>
-      <button className="btn" onClick={makeBatch}>Batch</button>
     </div>
   )
 }
