@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export const Counter = ( { stock } ) => {
+export const Counter = ( { stock, onAdd } ) => {
 
   const [count, setCount] = useState(1)
 
@@ -17,10 +17,13 @@ export const Counter = ( { stock } ) => {
   }
 
   return (
-    <div className="counter">
+    <>
+      <div className="counter">
         <button onClick={onSubHandler} className="btn btn-sm border-transparent bg-indigo-600 py-1 px-4 text-sm text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 w-3"> - </button>
         <span className="text-xl m-2">{count}</span>
         <button onClick={onAddHandler} className="btn btn-sm border-transparent bg-indigo-600 py-1 px-4 text-sm text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 w-3"> + </button>
-    </div>
+      </div>
+      <button className="btn btn-sm border-transparent bg-indigo-600" onClick={()=>onAdd(count)}>Comprar</button>
+    </>
   )
 }

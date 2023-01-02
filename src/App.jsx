@@ -7,14 +7,14 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import React from 'react';
 import ProductCart from './componentes/ProductCart';
 import Contact from './componentes/Contact';
-import { CartContext } from './componentes/context/CartContext';
+import { CartContextProvider } from './componentes/context/CartContext';
 import { Detail } from './componentes/Detail';
 import { Home } from './componentes/Home';
 
 function App() {
 
   return (
-    <CartContext.Provider value={{nombre: "hola"}}>
+    <CartContextProvider>
       <BrowserRouter>
         <NavBar />
         <Routes>
@@ -27,8 +27,9 @@ function App() {
         </Routes>
         <Footer />
       </BrowserRouter>
-    </CartContext.Provider>
+    </CartContextProvider>
   );
 }
 
 export default App;
+
