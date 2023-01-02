@@ -26,6 +26,11 @@ const ItemListContainer = () => {
 
   return (
     <div className="item-list-container">
+        <div className="space-product-title">
+          <h1 className="product-title">
+            Nuestros Productos
+          </h1>
+        </div>
         <Loader loading={ items.length === 0 } />
         { items.map( i => <WineCard key={i.id} {...i}/> ) }
     </div>

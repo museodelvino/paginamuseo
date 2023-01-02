@@ -2,6 +2,7 @@ import { Fragment, useState } from 'react'
 import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import CartWidget from './CartWidget'
+import { Link } from 'react-router-dom'
 
 const navigation = {
   categories: [
@@ -133,19 +134,25 @@ export default function NavBar() {
 
                 <div className="space-y-6 border-t border-gray-200 py-6 px-4">
                   <div className="flow-root">
-                    <a href="#" className="-m-2 block p-2 font-medium text-gray-900">
-                      Inicio
-                    </a>
+                    <Link to="/">
+                      <a href="#" className="-m-2 block p-2 font-medium text-gray-900">
+                        Inicio
+                      </a>
+                    </Link>
                   </div>
                   <div className="flow-root">
-                    <a href="#" className="-m-2 block p-2 font-medium text-gray-900">
-                      Productos
-                    </a>
+                    <Link to="/produts">
+                      <a href="#" className="-m-2 block p-2 font-medium text-gray-900">
+                        Productos
+                      </a>
+                    </Link>
                   </div>
                   <div className="flow-root">
-                    <a href="#" className="-m-2 block p-2 font-medium text-gray-900">
-                      Contacto
-                    </a>
+                    <Link to="/contact">
+                      <a href="#" className="-m-2 block p-2 font-medium text-gray-900">
+                        Contacto
+                      </a>
+                    </Link>
                   </div>
                 </div>
 
@@ -182,6 +189,7 @@ export default function NavBar() {
 
               {/* Logo */}
               <div className="ml-4 flex lg:ml-0">
+                <Link to="/">
                 <a href="#">
                   <span className="sr-only">Your Company</span>
                   <img
@@ -190,6 +198,7 @@ export default function NavBar() {
                     alt=""
                   />
                 </a>
+                </Link>
               </div>
 
               {/* Flyout menus */}
@@ -294,17 +303,23 @@ export default function NavBar() {
 
               <div className="ml-auto flex items-center">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
+                  <Link to="/">
                   <a href="#" className="text-m font-medium text-gray-700 hover:text-gray-900">
                     Inicio
                   </a>
+                  </Link>
                   <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
+                  <Link to="/products">
                   <a href="#" className="text-m font-medium text-gray-700 hover:text-gray-900">
                     Productos
                   </a>
+                  </Link>
                   <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
+                  <Link to="/contact">
                   <a href="#" className="text-m font-medium text-gray-700 hover:text-gray-900">
                     Contacto
                   </a>
+                  </Link>
                   <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
                 </div>
 

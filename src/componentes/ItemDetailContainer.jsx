@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { PRODUCTS } from "../data/products"
-import { Counter } from "./Counter"
 import { StarIcon } from '@heroicons/react/20/solid'
-import { useCart } from "./context/CartContext"
+import { useCart } from './context/CartContext'
+import { Counter } from "./Counter"
 
 
 const reviews = { href: '#', average: 4, totalCount: 117 }
@@ -17,7 +17,6 @@ const ItemDetailContainer = () => {
   const [item, setItem] = useState({})
   const { id } = useParams()
 
-  // const darkmode = useContext(CartContext)
   const { addToCart } = useCart()
 
   useEffect(() => {
@@ -38,10 +37,18 @@ const ItemDetailContainer = () => {
   const addHandler = () => {
     addToCart( id )
   }
-  
+
+
+  const onAdd = (quantity) => {
+      const newItem = {
+          ...item,
+          quantity
+      }
+      addToCart(newItem)
+  }
+
     return (
       <div className="bg-white">
-        {/* <p className="text-xl">Darkmode {darkmode ? "on" : "off"}</p> */}
         <div className="pt-6">
           
           {/* Image gallery */}

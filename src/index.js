@@ -5,7 +5,6 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { CartContext } from './componentes/context/CartContext';
 
 const firebaseConfig = {
   apiKey: "AIzaSyDbkMjnSa8ttC5jGUQ9gJSPCyikdi5rQhk",
@@ -22,9 +21,7 @@ const analytics = getAnalytics(app);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  // <CartContext.Provider>
     <App />
-  // </CartContext.Provider>
 );
 
 reportWebVitals();
