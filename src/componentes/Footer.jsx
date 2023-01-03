@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
   return (
     <h1 className="footer">
-      <footer className="footer footer-center p-10 bg-primary text-primary-content">
+      <footer className="footer footer-center p-10 bg-red-900 text-primary-content">
         <div>
           <img src={require('../img/logo-faro.png')} alt="" className='imgFooter' />
           <p className="font-bold">

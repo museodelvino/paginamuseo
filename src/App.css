@@ -139,15 +139,15 @@
     margin: 30px;
 }
 
-.card-title-second {
-    text-align: center;
-}
+/* .card-title-second {
+    text-align: center !important;
+} */
 
 .text-card {
     font-size: 20px;
     font-family: "Gilda Display", sans-serif;
     text-align: center;
-    color: rgb(112, 93, 29);
+    color: rgb(175, 42, 42);
 }
 
 .counter {
