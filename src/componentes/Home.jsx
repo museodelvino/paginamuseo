@@ -5,7 +5,7 @@ import ItemListContainer from './ItemListContainer'
 
 export const Home = () => {
   return (
-    <div>
+    <div className='font'>
         <Background />
         <ItemListContainer />
         <FrecuentQuestions />

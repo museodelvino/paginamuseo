@@ -20,12 +20,12 @@ const ItemListContainer = () => {
     return new Promise( (resolve, reject) => {
         setTimeout(() => {
           resolve( PRODUCTS )
-        }, 3000);
+        }, 1000);
     })
   }
 
   return (
-    <div className="item-list-container">
+    <div className="item-list-container" id="products">
         <div className="space-product-title">
           <h1 className="product-title">
             Nuestros Productos

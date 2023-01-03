@@ -3,6 +3,8 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans&display=swap');
+
 
 .cabeza {
     background-color:#820000;
@@ -143,12 +145,12 @@
     text-align: center !important;
 } */
 
-.text-card {
+/* .text-card {
     font-size: 20px;
     font-family: "Gilda Display", sans-serif;
     text-align: center;
     color: rgb(175, 42, 42);
-}
+} */
 
 .counter {
     margin-top: 40px;
@@ -159,9 +161,41 @@
 }
 
 .product-title {
-    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    /* font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
     font-size: 34px;
     text-align: center;
     margin: 5vh 0;
     font-weight: bold;
+}
+
+.font {
+    font-family: 'Encode Sans', sans-serif;
+}
+
+.cart-table {
+    min-width: 150px;
+}
+
+.imageCart {
+    max-height: 150px;
+    max-width: 280px;
+}
+
+.cont {
+    max-width: 80%;
+    margin: 1% 10%;
+    display: flex;
+    flex-direction: row;
+}
+
+.info {
+    /* border: rgba(0, 0, 0, 0.178) solid 2px; */
+    max-width: 60%;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 50px;
+    max-width: 170px;
 }
