@@ -183,7 +183,7 @@
 
 .cont {
     max-width: 80%;
-    margin: 1% 10%;
+    margin: 8% 10%;
     display: flex;
     flex-direction: row;
 }
@@ -199,3 +199,29 @@
     margin: 20px 50px;
     max-width: 170px;
 }
+
+.m {
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+.clear-cart:hover {
+    opacity: 0.6;
+    animation: clear 2s linear
+}
+
+.icon-clear {
+    padding-right: 5px;
+    /* text-align: center;
+    position: absolute;
+    opacity: 0; */
+}
+
+/* .icon-clear:hover {
+    text-align: center;
+    position: absolute;
+    opacity:10;
+    color: black;
+    font-size: 30px;
+} */
+

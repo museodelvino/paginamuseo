@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import { PRODUCTS } from "../data/products"
 import { StarIcon } from '@heroicons/react/20/solid'
 import { useCart } from './context/CartContext'
@@ -11,7 +11,10 @@ function classNames(...classes) {
 
 const ItemDetailContainer = () => {
 
+  const [isInCart, setIsInCart] = useState(false)
+
   const [item, setItem] = useState({})
+
   const { id } = useParams()
 
   const { addToCart } = useCart()
@@ -35,13 +38,14 @@ const ItemDetailContainer = () => {
     addToCart( id )
   }
 
-
   const onAdd = (quantity) => {
     const newItem = {
         ...item,
         quantity
     }
     addToCart(newItem)
+    //aca
+    setIsInCart(true)
 }
 
 return (
@@ -71,7 +75,15 @@ return (
           <div className="mt-4 space-y-6">
             <p className="text-sm text-gray-600">{item.details}</p>
           </div> */}
-          <Counter stock={item.stock} onAdd={onAdd}/>
+          {/* <Counter stock={item.stock} onAdd={onAdd}/> */}
+
+          {isInCart ? (
+            <div className="flex flex-col space-y-8 mt-6">
+              <Link to='/cart' className="btn btn-sm py-1 px-4 text-white mb-8 bg-black rounded-none w-44 h-11">Finalizar compra</Link>
+            </div>)
+              :
+            (
+             <Counter onAdd={onAdd} stock={item.stock} />)}
         </div>
       </div>
     </div>

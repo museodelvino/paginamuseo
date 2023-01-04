@@ -295,7 +295,7 @@ export default function NavBar() {
                       href={page.href}
                       className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800 titulo font"
                     >
-                      {page.name}
+                      {page.name.toUpperCase()}
                     </a>
                   ))}
                 </div>
