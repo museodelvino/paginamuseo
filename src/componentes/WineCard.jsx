@@ -5,7 +5,7 @@ const WineCard = ( {id, name, stock, price, imageSrc} ) => {
   return (
     <div className='wine-card'>
         <div className="card w-80 bg-base-100 shadow-xl">
-            <figure><img src={imageSrc} alt="imageWine" /></figure>
+            <figure><img src={imageSrc} alt="imageWine" className='imageWine' /></figure>
             <div className="card-body text-center">
                 <h3 className="card-title-second font-bold text-2xl">{name}</h3>
                 <p className='text-card text-lg mt-5'>${price}</p>

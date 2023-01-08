@@ -141,6 +141,10 @@
     margin: 30px;
 }
 
+.imageWine {
+    height: 195px;
+}
+
 /* .card-title-second {
     text-align: center !important;
 } */
@@ -177,8 +181,8 @@
 }
 
 .imageCart {
-    max-height: 150px;
-    max-width: 280px;
+    height: 150px;
+    width: 280px;
 }
 
 .cont {
@@ -194,15 +198,17 @@
 }
 
 .buttons {
-    display: flex;
-    flex-direction: column;
-    margin: 20px 50px;
+    margin: 20px 50px 20px 69%;
     max-width: 170px;
 }
 
 .m {
     margin-top: 20px;
     margin-bottom: 80px;
+}
+
+.mt-buttons {
+    margin-top: 22px !important;
 }
 
 .clear-cart:hover {
@@ -225,3 +231,23 @@
     font-size: 30px;
 } */
 
+.check {
+    display: flex;
+    flex-direction: row;
+}
+
+.box-1 {
+    max-width: 55%;
+}
+
+.box-2 {
+    max-width: 30%;
+}
+
+.checkout {
+    height: 100%;
+    background-color: bisque;
+    /* box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); */
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+    box-shadow: rgb(204, 166, 119, 0.8) 5px 5px, rgb(204, 166, 119, 0.6) 10px 10px, rgb(204, 166, 119, 0.4) 15px 15px, rgb(204, 166, 119, 0.2) 20px 20px, rgb(204, 166, 119, 0.1) 25px 25px;
+}

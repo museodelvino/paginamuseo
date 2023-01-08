@@ -1,6 +1,7 @@
 import React from 'react'
 
 const Background = () => {
+
   return (
     <div className='fondoInicio font'>
         <div className="hero min-h-screen" style={{ backgroundImage: `url("http://mundoclubhouse.com/wp-content/uploads/2019/09/IMG_5153-1-1024x575.jpg")` }}>

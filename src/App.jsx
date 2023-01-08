@@ -9,6 +9,8 @@ import ProductCart from './componentes/ProductCart';
 import Contact from './componentes/Contact';
 import { CartContextProvider } from './componentes/context/CartContext';
 import { Home } from './componentes/Home';
+import Checkout from './componentes/Checkout';
+import ItemFirebase from './componentes/ItemFirebase';
 
 function App() {
 
@@ -22,6 +24,8 @@ function App() {
           <Route path='/products/:id' element={<ItemDetailContainer/>} />
           <Route path='/cart' element={<ProductCart />} />
           <Route path='/contact' element={<Contact />} />
+          <Route path='/checkout' element={<Checkout />} />
+          <Route path='/item' element={<ItemFirebase />} />
         </Routes>
         <Footer />
       </BrowserRouter>

@@ -4,20 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDbkMjnSa8ttC5jGUQ9gJSPCyikdi5rQhk",
-  authDomain: "proyecto-prueba-97920.firebaseapp.com",
-  projectId: "proyecto-prueba-97920",
-  storageBucket: "proyecto-prueba-97920.appspot.com",
-  messagingSenderId: "1042952587333",
-  appId: "1:1042952587333:web:9352ed5bc3e4828dedbb2c",
-  measurementId: "G-XCD80777S2"
-};
-
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+    apiKey: process.env.REACT_APP_APIKEY,
+    authDomain: process.env.REACT_APP_authDomain,
+    projectId: process.env.REACT_APP_projectId,
+    storageBucket: process.env.REACT_APP_storageBucket,
+    messagingSenderId: process.env.REACT_APP_messagingSenderId,
+    appId: process.env.REACT_APP_appId,
+    measurementId: process.env.REACT_APP_measurementId
+  };
+  
+  const app = initializeApp(firebaseConfig);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
