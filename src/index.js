@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { initializeApp } from "firebase/app";
+import { CartContextProvider } from './componentes/context/CartContext';
 
 const firebaseConfig = {
     apiKey: process.env.REACT_APP_APIKEY,
@@ -19,7 +20,9 @@ const firebaseConfig = {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <CartContextProvider>
     <App />
+  </CartContextProvider>
 );
 
 reportWebVitals();

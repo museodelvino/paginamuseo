@@ -1,13 +1,8 @@
 import { useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom"
 import { PRODUCTS } from "../data/products"
-import { StarIcon } from '@heroicons/react/20/solid'
 import { useCart } from './context/CartContext'
 import { Counter } from "./Counter"
-  
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
 
 const ItemDetailContainer = () => {
 
@@ -44,7 +39,6 @@ const ItemDetailContainer = () => {
         quantity
     }
     addToCart(newItem)
-    //aca
     setIsInCart(true)
 }
 
@@ -53,7 +47,7 @@ return (
     <div className="aspect-w-3 aspect-h-2 overflow-hidden rounded-lg">
       <img
         src={item.imageSrc}
-        // alt={item.imageAlt}
+        alt={item.imageAlt}
         className="h-full object-cover object-center "
       />
     </div>
@@ -71,19 +65,20 @@ return (
           </div>
         </div>
         <div className="mt-10">
-          {/* <h2 className="text-sm font-medium text-gray-900">Detalles</h2>
+          <h2 className="text-sm font-medium text-gray-900">Detalles</h2>
           <div className="mt-4 space-y-6">
             <p className="text-sm text-gray-600">{item.details}</p>
-          </div> */}
-          {/* <Counter stock={item.stock} onAdd={onAdd}/> */}
+          </div>
 
           {isInCart ? (
             <div className="flex flex-col space-y-8 mt-10 mb-8">
-              <Link to='/cart' className="btn btn-sm py-1 px-4 text-white bg-black rounded-none w-44 h-10">Finalizar compra</Link>
+              <Link to='/cart' className="btn btn-sm py-1 px-4 text-white bg-black rounded-none w-44 h-12">Ir al carrito</Link>
               <Link to='/products' className="text-black bg-white rounded-none w-40 h-9 text-center mt-buttons">Seguir comprando</Link>
             </div>)
               :
-            (<Counter onAdd={onAdd} stock={item.stock} />)}
+            (<>
+              <Counter onAdd={onAdd} stock={item.stock} />
+            </>)}
         </div>
       </div>
     </div>

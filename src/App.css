@@ -94,12 +94,9 @@
     color: rgb(17, 1, 1);
 }
 
-.tituloInicio {
-    margin-bottom: 50px;
-}
-
-.parrafoInicio {
-    margin-bottom: 50px;
+.fondoInicio {
+    background: #000000;
+    opacity: 0.94;
 }
 
 .frecuent-questions {
@@ -137,9 +134,6 @@
     justify-content: space-around;
 }
 
-.item-list-container .wine-card {
-    margin: 30px;
-}
 
 .imageWine {
     height: 195px;

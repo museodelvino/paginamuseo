@@ -68,7 +68,6 @@ const ContainerCart = () => {
       <tbody>
       {items.map( i => <tr key={i.id}>
         <img src={i.imageSrc} alt={i.imageAlt} className="h-full w-full object-cover object-center imageCart" />
-        {/* <th scope="row">{i.id}</th> */}
         <td className="cart-table">{i.name}</td>
         <td className="cart-table">${formatPrice(i.price)}</td>
         <td className="cart-table">{i.quantity}</td>
@@ -89,8 +88,8 @@ const ContainerCart = () => {
       </tbody>
       </table>
       <div className="buttons">
-        <button className='btn mt-8 bg-emerald-500 rounded-none hover:bg-emerald-300 hover:text-black' onClick={editarOrderHandler}>EDITAR ORDEN</button>
-        <button className='btn mt-8 bg-emerald-500 rounded-none hover:bg-emerald-300 hover:text-black' onClick={makeBatch}>BATCH</button>
+        {/* <button className='btn mt-8 bg-emerald-500 rounded-none hover:bg-emerald-300 hover:text-black' onClick={editarOrderHandler}>EDITAR ORDEN</button>
+        <button className='btn mt-8 bg-emerald-500 rounded-none hover:bg-emerald-300 hover:text-black' onClick={makeBatch}>BATCH</button> */}
         <Link to='/checkout'>
           <button className="btn mt-8 bg-emerald-500 rounded-none hover:bg-emerald-300 hover:text-black" onClick={makeOrder}>Finalizar compra</button>        
         </Link>

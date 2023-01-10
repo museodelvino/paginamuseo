@@ -292,7 +292,7 @@ export default function NavBar() {
                   {navigation.pages.map((page) => (
                     <a
                       key={page.name}
-                      href={page.href}
+                      href={"/"}
                       className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800 titulo font"
                     >
                       {page.name.toUpperCase()}
@@ -315,9 +315,9 @@ export default function NavBar() {
                   </a>
                   </Link>
                   <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
-                  <Link to="/contact">
+                  <Link to="/faq">
                   <a href="#" className="text-m font-medium text-gray-700 hover:text-gray-900">
-                    Contacto
+                    Preguntas Frecuentes
                   </a>
                   </Link>
                   <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
