@@ -8,50 +8,50 @@ const ContainerCart = () => {
 
   const { items, clearCart, removeItem, getTotal } = useCart()
 
-  const makeOrder = () => {
-    const user = {name: "Renzo", phone: 2612054958, email: "renzop95@hotmail.com"}
-    const order = {
-      buyer: user,
-      items: items,
-    }
-    console.log("Levantando orden:", order);
-    saveOrder(order)
-  }
+  // const makeOrder = () => {
+  //   const user = {name: "Renzo", phone: 2612054958, email: "renzop95@hotmail.com"}
+  //   const order = {
+  //     buyer: user,
+  //     items: items,
+  //   }
+  //   console.log("Levantando orden:", order);
+  //   saveOrder(order)
+  // }
 
-  const saveOrder = async ( order ) => {
-    const db = getFirestore()
-    const orderCollection = collection(db, "orders")
-    const { id } = await addDoc(orderCollection, order)
-    const orden = `Nueva orden: ${id}`
-    alert(orden);
-    console.log(orden);
-  }
+  // const saveOrder = async ( order ) => {
+  //   const db = getFirestore()
+  //   const orderCollection = collection(db, "orders")
+  //   const { id } = await addDoc(orderCollection, order)
+  //   const orden = `Nueva orden: ${id}`
+  //   alert(orden);
+  //   console.log(orden);
+  // }
 
-  const editOrder = (id) => {
-    const db = getFirestore()
-    const orderDoc = doc(db, "orders", id)
-    updateDoc(
-      orderDoc,
-      {buyer: {name: "Juan", phone: 12888233, email: "juan213@hotmail.com", items: items}, total: 250}
-      )
-  }
+  // const editOrder = (id) => {
+  //   const db = getFirestore()
+  //   const orderDoc = doc(db, "orders", id)
+  //   updateDoc(
+  //     orderDoc,
+  //     {buyer: {name: "Juan", phone: 12888233, email: "juan213@hotmail.com", items: items}, total: 250}
+  //     )
+  // }
 
-  const editarOrderHandler = () => {
-    editOrder("9ElCXjPKuE5J90Fhu3DT")
-  }
+  // const editarOrderHandler = () => {
+  //   editOrder("9ElCXjPKuE5J90Fhu3DT")
+  // }
 
-  const makeBatch = () => {
-    const db = getFirestore()
-    const order1 = doc(db, "orders", "4WDfTds8R0WcN56EnNYO")
-    const order2 = doc(db, "orders", "C4r9bEzF126lAGecmc56")
+  // const makeBatch = () => {
+  //   const db = getFirestore()
+  //   const order1 = doc(db, "orders", "4WDfTds8R0WcN56EnNYO")
+  //   const order2 = doc(db, "orders", "C4r9bEzF126lAGecmc56")
 
-    const batch = writeBatch(db)
+  //   const batch = writeBatch(db)
 
-    batch.update(order1, {total: 12})
-    batch.update(order2, {total: 1000000})
+  //   batch.update(order1, {total: 12})
+  //   batch.update(order2, {total: 1000000})
 
-    batch.commit()
-  }
+  //   batch.commit()
+  // }
 
   return (
     <div>
@@ -91,7 +91,7 @@ const ContainerCart = () => {
         {/* <button className='btn mt-8 bg-emerald-500 rounded-none hover:bg-emerald-300 hover:text-black' onClick={editarOrderHandler}>EDITAR ORDEN</button>
         <button className='btn mt-8 bg-emerald-500 rounded-none hover:bg-emerald-300 hover:text-black' onClick={makeBatch}>BATCH</button> */}
         <Link to='/checkout'>
-          <button className="btn mt-8 bg-emerald-500 rounded-none hover:bg-emerald-300 hover:text-black" onClick={makeOrder}>Finalizar compra</button>        
+          <button className="btn mt-8 bg-emerald-500 rounded-none hover:bg-emerald-300 hover:text-black">Finalizar compra</button>        
         </Link>
         <div>
           <button className="btn mt-8 bg-black rounded-none clear-cart" onClick={clearCart}>

@@ -47,7 +47,7 @@ export default function Modal() {
                       </Dialog.Title>
                       <div className="mt-2">
                         <p className="text-sm text-gray-500 mt-8">
-                          Su orden de compra es: ....xxx....
+                          Su orden de compra es: xQ94Cs782sca
                         </p>
                       </div>
                     </div>
