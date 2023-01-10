@@ -8,9 +8,9 @@ import React from 'react';
 import ProductCart from './componentes/ProductCart';
 import { Home } from './componentes/Home';
 import Checkout from './componentes/Checkout';
-// import ItemFirebase from './componentes/ItemFirebase';
 import FrecuentQuestions from './componentes/FrecuentQuestions';
-import Toast from './componentes/Toast';
+import ModalTwo from './componentes/ModalTwo';
+import Swap from './componentes/Swap';
 
 function App() {
 
@@ -24,8 +24,8 @@ function App() {
           <Route path='/cart' element={<ProductCart />} />
           <Route path='/faq' element={<FrecuentQuestions />} />
           <Route path='/checkout' element={<Checkout />} />
-          <Route path='/toast' element={<Toast />} />
-          {/* <Route path='/item' element={<ItemFirebase />} /> */}
+          <Route path='/modal' element={<ModalTwo />} />
+          <Route path='/swap' element={<Swap />} />
         </Routes>
         <Footer />
       </BrowserRouter>
