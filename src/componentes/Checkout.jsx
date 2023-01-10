@@ -12,10 +12,21 @@ const Checkout = () => {
 
   const [button, setbutton] = useState(true)
 
+  const [buyer, setBuyer] = useState({
+    name: "",
+    surname: "",
+    telephone: "",
+    email: "",
+})
+
+const handleSubmitChange = (e) => {
+    setBuyer({ ...buyer, [e.target.name]: e.target.value })
+}
+
   const makeOrder = () => {
-    const user = {name: "Renzo", phone: 2612054958, email: "renzop95@hotmail.com"}
+
     const order = {
-      buyer: user,
+      buyer,
       items: items,
     }
     saveOrder(order)
@@ -41,16 +52,16 @@ const Checkout = () => {
             <h1 className="text-3xl font-bold m-10 max-w-28">Checkout</h1>
             <form className='w-5/6  mb-14 h-auto'>
               <label className='m-10'>Nombre</label>
-              <input id="name" type="text" name="name" placeholder="Nombre" className="input input-bordered w-full max-w-xs ml-10 mb-5" />
+              <input id="name" type="text" name="name" placeholder="Nombre" onChange={handleSubmitChange} className="input input-bordered w-full max-w-xs ml-10 mb-5" />
 
               <label className='m-10'>Apellido</label>
-              <input id="surname" type="text" name="surname" placeholder="Apellido" className="input input-bordered w-full max-w-xs ml-10 mb-5" />
+              <input id="surname" type="text" name="surname" placeholder="Apellido" onChange={handleSubmitChange} className="input input-bordered w-full max-w-xs ml-10 mb-5" />
 
               <label className='m-10'>Teléfono</label>
-              <input id="telephone" type="tel" name="telephone" placeholder="Teléfono" className="input input-bordered w-full max-w-xs ml-10 mb-5" />
+              <input id="telephone" type="tel" name="telephone" placeholder="Teléfono" onChange={handleSubmitChange} className="input input-bordered w-full max-w-xs ml-10 mb-5" />
 
               <label className='m-10'>Email</label>
-              <input id="email" type="email" name="email" placeholder="Email" className="input input-bordered w-full max-w-xs ml-10 mb-5" />
+              <input id="email" type="email" name="email" placeholder="Email" onChange={handleSubmitChange} className="input input-bordered w-full max-w-xs ml-10 mb-5" />
               
               <div className="form-control ml-10 mt-3">
                   <div className="input-group">
