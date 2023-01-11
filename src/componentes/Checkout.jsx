@@ -19,6 +19,9 @@ const Checkout = () => {
     email: "",
 })
 
+const emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i
+const telephoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{1,6}$/im
+
 const handleSubmitChange = (e) => {
     setBuyer({ ...buyer, [e.target.name]: e.target.value })
 }
@@ -50,15 +53,15 @@ const handleSubmitChange = (e) => {
     <div className='check ml-10 font h-auto'>
         <div className='box-1'>
             <h1 className="text-3xl font-bold m-10 max-w-28">Checkout</h1>
-            <form className='w-5/6  mb-14 h-auto'>
+            <form className='w-5/6  mb-14 h-auto' action=''>
               <label className='m-10'>Nombre</label>
-              <input id="name" type="text" name="name" placeholder="Nombre" onChange={handleSubmitChange} className="input input-bordered w-full max-w-xs ml-10 mb-5" />
+              <input id="name" type="text" name="name" placeholder="Nombre" onChange={handleSubmitChange} className="input input-bordered w-full max-w-xs ml-10 mb-5"/>
 
               <label className='m-10'>Apellido</label>
-              <input id="surname" type="text" name="surname" placeholder="Apellido" onChange={handleSubmitChange} className="input input-bordered w-full max-w-xs ml-10 mb-5" />
+              <input id="surname" type="text" name="surname" placeholder="Apellido" onChange={handleSubmitChange} className="input input-bordered w-full max-w-xs ml-10 mb-5"  />
 
               <label className='m-10'>Teléfono</label>
-              <input id="telephone" type="tel" name="telephone" placeholder="Teléfono" onChange={handleSubmitChange} className="input input-bordered w-full max-w-xs ml-10 mb-5" />
+              <input id="telephone" type="tel" name="telephone" placeholder="Teléfono" onChange={handleSubmitChange} className="input input-bordered w-full max-w-xs ml-10 mb-5" pattern='[0-9]{7,9}' maxLength={9} />
 
               <label className='m-10'>Email</label>
               <input id="email" type="email" name="email" placeholder="Email" onChange={handleSubmitChange} className="input input-bordered w-full max-w-xs ml-10 mb-5" />
@@ -75,20 +78,35 @@ const handleSubmitChange = (e) => {
               {
                 button ?
                   <>
-                  <Link to='/'>
-                    <button className="btn btn-block bg-black ml-10 mt-10" onClick={makeOrder}>
+                  {buyer.name && buyer.surname && buyer.telephone && buyer.email && telephoneRegex.test(buyer.telephone) && emailRegex.test(buyer.email)
+                    ?
+                    <Link to='/'>
+                      <button className="btn btn-block bg-black ml-10 mt-10" onClick={makeOrder}>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="mr-2 mt-2" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0z"/>
+                          <path d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1h-.003zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195l.054.012z"/>
+                          <path d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083c.058-.344.145-.678.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1H1z"/>
+                          <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 5.982 5.982 0 0 1 3.13-1.567z"/>
+                        </svg>   
+                        <p>
+                          PAGAR
+                        </p> 
+                      </button>
+                    </Link>
+                    :
+
+                    <button className="btn btn-block bg-black ml-10 mt-10" disabled>
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="mr-2 mt-2" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0z"/>
                         <path d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1h-.003zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195l.054.012z"/>
                         <path d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083c.058-.344.145-.678.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1H1z"/>
                         <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 5.982 5.982 0 0 1 3.13-1.567z"/>
                       </svg>
-                      
                       <p>
                         PAGAR
                       </p> 
                     </button>
-                  </Link>
+                  }
                   <Link to='/cart'>
                     <button className="btn-block bg-white ml-10 mt-5 flex flex-row justify-center items-center hover:bg-gray-500 h-12 hover:text-white hover:rounded">
                       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">

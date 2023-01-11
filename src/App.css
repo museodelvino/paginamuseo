@@ -212,6 +212,17 @@
     box-shadow: rgb(204, 166, 119, 0.8) 5px 5px, rgb(204, 166, 119, 0.6) 10px 10px, rgb(204, 166, 119, 0.4) 15px 15px, rgb(204, 166, 119, 0.2) 20px 20px, rgb(204, 166, 119, 0.1) 25px 25px;
 }
 
+form input:valid {
+	border: rgb(1, 209, 1) 1px solid;
+}
+
+form input:invalid {
+	border: rgb(207, 17, 17) 1px solid;
+}
+
+
+
+
 .footer-two {
     background-color: #000000;
     height: auto;
