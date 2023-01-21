@@ -48,7 +48,7 @@ return (
       <img
         src={item.imageSrc}
         alt={item.imageAlt}
-        className="h-full object-cover object-center "
+        className="h-full object-cover object-center"
       />
     </div>
     <div className="info">
@@ -65,10 +65,10 @@ return (
           </div>
         </div>
         <div className="mt-10">
-          <h2 className="text-sm font-medium text-gray-900">Detalles</h2>
+          {/* <h2 className="text-sm font-medium text-gray-900">Detalles</h2>
           <div className="mt-4 space-y-6">
             <p className="text-sm text-gray-600">{item.details}</p>
-          </div>
+          </div> */}
 
           {isInCart ? (
             <div className="flex flex-col space-y-8 mt-10 mb-8">

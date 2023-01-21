@@ -96,7 +96,8 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 100px;
+    max-width: 86%;
+    margin: 0 7% 5% 7%;
 }
 
 .tituloPreguntasFrecuentes {
@@ -105,9 +106,9 @@
     margin-bottom: 20px;
 }
 
-.collapsible {
+/* .collapsible {
     max-width: 1050px;
-}
+} */
 
 .collapsible div {
     font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -129,6 +130,10 @@
 
 .imageWine {
     height: 195px;
+}
+
+.card-container-wine {
+    height: 490px !important;
 }
 
 .counter {
@@ -243,4 +248,40 @@ form input:invalid {
     width: 30px;
     height: 30px;
     margin: 12px 0;
+}
+
+@media (max-width: 1023px) {
+    .nav-container {
+        display: flex;
+        justify-content: space-between !important;
+    }
+    .item-cart {
+        margin: 0 !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .frecuent-questions {
+        max-width: 96%;
+        margin: 0 2% 5vh 2%;
+        /* margin-bottom: 5vh; */
+    }
+    .footer {
+        height: 300px;
+        padding: 0.8em;
+        gap: 10px;
+    }
+}
+@media (max-width: 400px) {
+    .tituloPreguntasFrecuentes {
+        font-size: 28px;
+    }
+    .small-size {
+        text-align: center;
+        margin: 0;
+        padding: auto;
+    }
+    .font-faq {
+        font-size: 18px;
+    }
 }

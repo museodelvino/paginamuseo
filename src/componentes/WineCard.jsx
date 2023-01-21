@@ -25,7 +25,7 @@ const WineCard = ( {id, name, stock, price, imageSrc} ) => {
 
   return (
     <div  style={wineCard} onMouseEnter={() => setbShadow("rgba(0, 0, 0, 0.35) 0px 5px 15px")} onMouseLeave={() => setbShadow("none")}>
-        <div className="card w-80 bg-base-100 shadow-xl">
+        <div className="card w-80 bg-base-100 shadow-xl card-container-wine">
             <figure><img src={imageSrc} alt="imageWine" className='imageWine' /></figure>
             <div className="card-body text-center">
                 <h3 className="card-title-second font-bold text-2xl">{name}</h3>

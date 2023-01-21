@@ -91,9 +91,6 @@ export default function NavBar() {
                                 <span className="absolute inset-0 z-10" aria-hidden="true" />
                                 {item.name}
                               </a>
-                              <p aria-hidden="true" className="mt-1">
-                                Shop now
-                              </p>
                             </div>
                           ))}
                         </div>
@@ -141,16 +138,16 @@ export default function NavBar() {
                     </Link>
                   </div>
                   <div className="flow-root">
-                    <Link to="/produts">
+                    <Link to="/products">
                       <a href="#" className="-m-2 block p-2 font-medium text-gray-900">
                         Productos
                       </a>
                     </Link>
                   </div>
                   <div className="flow-root">
-                    <Link to="/contact">
+                    <Link to="/faq">
                       <a href="#" className="-m-2 block p-2 font-medium text-gray-900">
-                        Contacto
+                        Preguntas Frecuentes
                       </a>
                     </Link>
                   </div>
@@ -177,7 +174,7 @@ export default function NavBar() {
 
         <nav aria-label="Top" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="border-b border-gray-200">
-            <div className="flex  items-center">
+            <div className="flex items-center nav-container">
               <button
                 type="button"
                 className="rounded-md bg-white p-2 text-gray-400 lg:hidden"
@@ -301,7 +298,7 @@ export default function NavBar() {
                 </div>
               </Popover.Group>
 
-              <div className="ml-auto flex items-center">
+              <div className="ml-auto flex items-center item-cart">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
                   <Link to="/">
                   <a href="#" className="text-m font-medium text-gray-700 hover:text-gray-900">
