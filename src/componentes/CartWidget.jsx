@@ -16,7 +16,7 @@ const CartWidget  = () => {
           { cartLenght() === 0 ?
             <span className="ml-1 text-m font-semibold text-gray-600">0</span>
           :
-            <span className="ml-1 text-m font-semibold text-gray-600">{cartLenght()}</span>
+            <span className="ml-1 text-m font-semibold text-gray-600 span-responsive">{cartLenght()}</span>
           }
           </span>
           <span className="sr-only"></span>

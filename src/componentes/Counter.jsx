@@ -48,7 +48,7 @@ export const Counter = ( { stock, onAdd } ) => {
         <button onClick={onAddHandler} className="btn btn-sm py-1 px-4 text-sm text-white w-3 bg-black rounded-none"> + </button>
       </div>
       <div onClick={notifyTwo}>
-        <button className="h-12 btn btn-sm py-1 px-4 text-white mb-8 bg-black rounded-none active: " onClick={()=>onAdd(count)}>Agregar al Carrito</button>
+        <button className="addCart h-12 btn btn-sm py-1 px-4 text-white mb-8 bg-black rounded-none active: " onClick={()=>onAdd(count)}>Agregar al Carrito</button>
       </div>
     </>
   )

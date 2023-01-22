@@ -47,9 +47,6 @@ const ItemListContainer = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const [pageCount, setPageCount] = useState(3);
 
-
-
-
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const itemsPerPage = screenWidth < 600 ? 5 : 9;
 
@@ -80,7 +77,6 @@ const ItemListContainer = () => {
         </div>
         <div className="products">
           <Loader loading={ items.length === 0 } />
-          {/* { item.map( i => <WineCard key={i.id} {...i} />)} */}
           { itemsToShow.map(i => <WineCard key={i.id} {...i}/> ) } 
         </div>
         <ReactPaginate
