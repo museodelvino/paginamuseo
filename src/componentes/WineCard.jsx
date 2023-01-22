@@ -3,25 +3,12 @@ import { Link } from "react-router-dom"
 
 const WineCard = ( {id, name, stock, price, imageSrc} ) => {
 
-  // const [bgColour, setBgColour] = useState("white");
-
   const [bShadow, setbShadow] = useState("none")
 
   const wineCard = {
     "margin": "30px",
-    // "background": `${bgColour}`,
     "boxShadow": `${bShadow}`,
   }
-
-  // const cont = (a, b) => {
-  //   setBgColour(a)
-  //   setbShadow(b)
-  // }
-
-  // const cont2 = (x, y) => {
-  //   setBgColour(x)
-  //   setbShadow(y)
-  // }
 
   return (
     <div  style={wineCard} onMouseEnter={() => setbShadow("rgba(0, 0, 0, 0.35) 0px 5px 15px")} onMouseLeave={() => setbShadow("none")}>
