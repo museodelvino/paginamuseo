@@ -297,6 +297,31 @@ form input:invalid {
     .cont {
         gap: 50px
     }
+
+    .titleCart {
+        font-size: 26px;
+    }
+
+    .buttonProuctCart {
+        font-size: 0.8rem;
+        height: 3rem;
+    }
+
+    .tableResponsive {
+        white-space: break-spaces;
+        text-align: center;
+        font-size: 18px;
+        min-width: 0px !important;
+    }
+
+    .imageCart {
+        height: 120px;
+        width: 120px;
+    }
+
+    .buttons {
+        margin: 0;
+    }
 }
 
 @media (max-width: 700px) {
@@ -336,14 +361,93 @@ form input:invalid {
     .span-responsive {
         font-size: 1rem;
     }
+
+    .tableResponsive {
+        font-size: 14px !important;
+        line-height: 1rem;
+    }
+
+    .quantity {
+        width: 20px;
+    }
+
+    .table {
+        text-align: center;
+    }
+
+    #priceTotal {
+        font-size: 18px !important;
+    }
+
+    .buttons {
+        width: 160px;
+    }
+
+    .finishCart,
+    .clear-cart {
+        height: 9vh;
+        border-radius: 15px;
+        padding: 3px 8px;
+    }
 }
 
 @media (max-width: 500px) {
     .info-small {
         max-width: 100%;
     }
+
     .text-responsive {
         font-size: 22px;
+    }
+
+    #productCart {
+        width: 96% !important;
+        margin: 2%;
+    }
+
+    .tableResponsive {
+        border-bottom-width: 0;
+        font-size: 16px !important;
+        font-weight: bold;
+    }
+
+    thead {
+        display: none;
+    }
+
+    .subPrice {
+        text-decoration: 2px darkred underline !important;
+    }
+    
+    .titleCart {
+        text-align: center;
+    }
+}
+
+@media (max-width: 460px) {
+    #productCart {
+        width: 90% !important;
+        margin: 3% 5%;
+    }
+
+    .tableResponsive {
+        font-size: 14px !important;
+        padding: 5px !important;
+        margin: 0;
+        max-width: 90px;
+        font-weight: normal;
+    }
+
+    .buttons {
+        width: 140px;
+    }
+
+    .finishCart,
+    .clear-cart {
+        font-size: 12px;
+        width: 140px;
+        margin: 10px;
+        height: 6vh;
     }
 }
 
