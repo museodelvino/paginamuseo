@@ -8,7 +8,7 @@ export default function CheckoutList() {
   const names = items.map(i => i.name)
 
   return (
-    <div className="overflow-hidden bg-white shadow sm:rounded-lg w-1/4 box-2 mx-32 mt-12 min-h-80 checkout">
+    <div className="overflow-hidden bg-white shadow sm:rounded-lg w-1/2 mx-32 mt-12 min-h-80 checkout">
       <div className="px-4 py-5 sm:px-6">
         <h3 className="text-lg font-medium leading-6 text-gray-900">Descripción de su compra</h3>
         <p className="mt-1 max-w-2xl text-sm text-gray-500">Por favor, antes de proceder a la compra, verifique si los productos y las cantidades coinciden con su orden de compra.</p>
