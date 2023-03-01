@@ -287,6 +287,15 @@ form input:invalid {
     width: 30vw;
 }
 
+.div-loc {
+    width: 90% !important;
+    margin: 20px 5% 50px 5%;
+}
+
+#map {
+    height: 400px;
+}
+
 @media (max-width: 1023px) {
     .nav-container {
         display: flex;
@@ -624,6 +633,15 @@ form input:invalid {
     .label {
         width: 80px;
         margin: 10px 0;
+    }
+
+    .div-loc {
+        width: 95% !important;
+        margin: 20px 2.5% 50px 2.5%;
+    }
+    
+    #map {
+        height: 400px;
     }
 }
 

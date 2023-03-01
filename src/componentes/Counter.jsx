@@ -17,10 +17,6 @@ export const Counter = ( { stock, onAdd } ) => {
     }
   }
 
-  // const notify = () => {
-  //   toast("¡Producto agregado!");
-  // };
-
   const notifyTwo = () => {
     const Toast = Swal.mixin({
       toast: true,

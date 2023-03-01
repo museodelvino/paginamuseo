@@ -4,8 +4,6 @@ import { formatPrice } from './formatPrice'
 export default function CheckoutList() {
 
   const { items, cartLenght, getTotal } = useCart()
-  
-  const names = items.map(i => i.name)
 
   return (
     <div className="overflow-hidden bg-white shadow sm:rounded-lg w-1/2 mx-32 mt-12 min-h-80 checkout">
@@ -19,7 +17,7 @@ export default function CheckoutList() {
             <dt className="text-sm font-medium text-gray-500">Productos:</dt>
             <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
               <ul>
-                <li>{names}</li>
+                {items.map(i => <li>{i.name}</li>)}
               </ul>
             </dd>
           </div>

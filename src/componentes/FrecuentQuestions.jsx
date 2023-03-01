@@ -3,7 +3,7 @@ import React from 'react'
 const FrecuentQuestions = () => {
   return (
     <div className='frecuent-questions font mt-14'>
-        <h3 className='tituloPreguntasFrecuentes'>Preguntas Frecuentes</h3>
+        <h3 className='product-title'>Preguntas Frecuentes</h3>
         <div className="collapse collapsible">
             <input type="checkbox" className="peer" /> 
             <div className="collapse-title bg-red-800 text-primary-content peer-checked:bg-rose-600 peer-checked:font-bold small-size">

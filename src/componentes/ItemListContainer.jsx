@@ -32,17 +32,17 @@ const ItemListContainer = () => {
 
   const [item, setItem] = useState([])
 
-  useEffect(() => {
-    getItems()
-  }, [])
+  // useEffect(() => {
+  //   getItems()
+  // }, [])
 
 
-  const getItems = async () => {
-    const db = getFirestore()
-    const itemCollection = collection(db, 'items')
-    const snapshot = await getDocs(itemCollection)
-    setItem(snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()})))
-  }
+  // const getItems = async () => {
+  //   const db = getFirestore()
+  //   const itemCollection = collection(db, 'items')
+  //   const snapshot = await getDocs(itemCollection)
+  //   setItem(snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()})))
+  // }
 
   const [currentPage, setCurrentPage] = useState(0);
   const [pageCount, setPageCount] = useState(3);
@@ -70,15 +70,18 @@ const ItemListContainer = () => {
 
   return (
     <div className="item-list-container" id="products">
+
         <div className="space-product-title">
           <h1 className="product-title">
             Nuestros Productos
           </h1>
         </div>
+
         <div className="products">
           <Loader loading={ items.length === 0 } />
           { itemsToShow.map(i => <WineCard key={i.id} {...i}/> ) } 
         </div>
+
         <ReactPaginate
           pageCount={pageCount}
           forcePage={currentPage}
@@ -90,6 +93,7 @@ const ItemListContainer = () => {
           breakLabel="..."
           pageRangeDisplayed={5}
         />
+        
     </div>
   )
 }

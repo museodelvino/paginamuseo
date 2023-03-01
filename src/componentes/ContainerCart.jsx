@@ -23,7 +23,6 @@ const ContainerCart = () => {
   //   const orderCollection = collection(db, "orders")
   //   const { id } = await addDoc(orderCollection, order)
   //   const orden = `Nueva orden: ${id}`
-  //   alert(orden);
   //   console.log(orden);
   // }
 
