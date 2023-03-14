@@ -130,6 +130,7 @@ export default function NavBar() {
                 </div>
 
                 <div className="space-y-6 border-t border-gray-200 py-6 px-4">
+
                   <div className="flow-root">
                     <Link to="/">
                       <a href="#" className="-m-2 block p-2 font-medium text-gray-900">
@@ -137,6 +138,7 @@ export default function NavBar() {
                       </a>
                     </Link>
                   </div>
+
                   <div className="flow-root">
                     <Link to="/products">
                       <a href="#" className="-m-2 block p-2 font-medium text-gray-900">
@@ -144,6 +146,15 @@ export default function NavBar() {
                       </a>
                     </Link>
                   </div>
+
+                  <div className="flow-root">
+                    <Link to="/geolocation">
+                      <a href="#" className="-m-2 block p-2 font-medium text-gray-900">
+                        Ubicación
+                      </a>
+                    </Link>
+                  </div>
+
                   <div className="flow-root">
                     <Link to="/faq">
                       <a href="#" className="-m-2 block p-2 font-medium text-gray-900">
@@ -309,6 +320,12 @@ export default function NavBar() {
                   <Link to="/products">
                   <a href="#" className="text-m font-medium text-gray-700 hover:text-gray-900">
                     Productos
+                  </a>
+                  </Link>
+                  <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
+                  <Link to="/geolocation">
+                  <a href="#" className="text-m font-medium text-gray-700 hover:text-gray-900">
+                    Ubicación
                   </a>
                   </Link>
                   <span className="h-6 w-px bg-gray-200" aria-hidden="true" />

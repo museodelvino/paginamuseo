@@ -9,8 +9,7 @@ import ProductCart from './componentes/ProductCart';
 import { Home } from './componentes/Home';
 import Checkout from './componentes/Checkout';
 import FrecuentQuestions from './componentes/FrecuentQuestions';
-import ModalTwo from './componentes/ModalTwo';
-import Swap from './componentes/Swap';
+import Geolocation from './componentes/Geolocation';
 
 function App() {
 
@@ -22,10 +21,9 @@ function App() {
           <Route path="/products" element={<ItemListContainer />} />
           <Route path='/products/:id' element={<ItemDetailContainer/>} />
           <Route path='/cart' element={<ProductCart />} />
+          <Route path='/geolocation' element={<Geolocation />} />
           <Route path='/faq' element={<FrecuentQuestions />} />
           <Route path='/checkout' element={<Checkout />} />
-          <Route path='/modal' element={<ModalTwo />} />
-          <Route path='/swap' element={<Swap />} />
         </Routes>
         <Footer />
       </BrowserRouter>
