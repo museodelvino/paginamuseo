@@ -5,6 +5,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { initializeApp } from "firebase/app";
 import { CartContextProvider } from './componentes/context/CartContext';
+import { Provider } from 'react-redux';
+import appReducer from './componentes/reducer/reducers'
+import { createStore } from 'redux';
 
 const firebaseConfig = {
     apiKey: process.env.REACT_APP_APIKEY,
@@ -18,11 +21,15 @@ const firebaseConfig = {
   
 const app = initializeApp(firebaseConfig);
 
+const store = createStore(appReducer)
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <CartContextProvider>
-    <App />
-  </CartContextProvider>
+  <Provider store={store}>
+    <CartContextProvider>
+      <App />
+    </CartContextProvider>
+  </Provider>
 );
 
 reportWebVitals();

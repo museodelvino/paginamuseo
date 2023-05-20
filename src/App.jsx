@@ -10,6 +10,7 @@ import { Home } from './componentes/Home';
 import Checkout from './componentes/Checkout';
 import FrecuentQuestions from './componentes/FrecuentQuestions';
 import Geolocation from './componentes/Geolocation';
+import ReduxExample from './componentes/ReduxExample';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
           <Route path='/geolocation' element={<Geolocation />} />
           <Route path='/faq' element={<FrecuentQuestions />} />
           <Route path='/checkout' element={<Checkout />} />
+          <Route path='/redux' element={<ReduxExample />} />
         </Routes>
         <Footer />
       </BrowserRouter>
