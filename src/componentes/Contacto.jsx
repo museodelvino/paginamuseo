@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const Geolocation = () => {
+const Contacto = () => {
 
   const [mapLoaded, setMapLoaded] = useState(false);
 
@@ -22,10 +22,14 @@ const Geolocation = () => {
 
   useEffect(() => {
     if (mapLoaded) {
-      const loc = { lat: -32.891707, lng: -68.842819,};
+      const loc = { lat: -32.88545560998308, lng: -68.84175746242109,};
       const map = new window.google.maps.Map(document.getElementById("map"), {
-        zoom: 15,
+        zoom: 16,
         center: loc,
+        zoomControl: true,
+        mapTypeControl: false,
+        streetViewControl: false,
+        fullscreenControl: false,
       });
   
       const  marker = new window.google.maps.Marker({
@@ -38,11 +42,11 @@ const Geolocation = () => {
 
   return (
     <div className='div-loc'>
-      <h2 className='product-title'>¿Dónde puedes encontrarnos?</h2>
-      <p className='text-xl text-gray-900 mb-5 text-description'>Calle España 948, Piso 14°, Premium Tower suites. Ciudad de Mendoza.</p>
+      <h2 className='product-title'>Ubicación</h2>
+      <p className='text-xl text-gray-900 mb-5 text-description'>Podés encontrarnos en Avenida Las Heras 291, Ciudad de Mendoza.</p>
       <div id="map" style={{ width: '100%', height: '500px' }}></div>
     </div>
   )
 }
 
-export default Geolocation
+export default Contacto

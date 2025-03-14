@@ -73,7 +73,7 @@ const ItemListContainer = () => {
 
         <div className="space-product-title">
           <h1 className="product-title">
-            Nuestros Productos
+            Conocé nuestras suscripciones
           </h1>
         </div>
 
@@ -82,7 +82,7 @@ const ItemListContainer = () => {
           { itemsToShow.map(i => <WineCard key={i.id} {...i}/> ) } 
         </div>
 
-        <ReactPaginate
+        {/* <ReactPaginate
           pageCount={pageCount}
           forcePage={currentPage}
           onPageChange={({ selected }) => setCurrentPage(selected)}
@@ -92,7 +92,7 @@ const ItemListContainer = () => {
           renderOnZeroPageCount={null}
           breakLabel="..."
           pageRangeDisplayed={5}
-        />
+        /> */}
         
     </div>
   )

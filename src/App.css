@@ -5,6 +5,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans&display=swap');
 
+.back {
+    background-color: #111010;
+}
+
 .cabeza {
     background-color:#820000;
     height: 100px;
@@ -77,8 +81,8 @@
 }
 
 .logo {
-    width: 55px;
-    height: 90px;
+    width: 240px;
+    height: 80px;
 }
 
 .titulo {
@@ -116,8 +120,8 @@
 }
 
 .imgFooter {
-    width: 100px;
-    height: 150px;
+    width: 230px;
+    height: 230px;
 }
 
 .item-list-container {

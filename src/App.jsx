@@ -9,7 +9,7 @@ import ProductCart from './componentes/ProductCart';
 import { Home } from './componentes/Home';
 import Checkout from './componentes/Checkout';
 import FrecuentQuestions from './componentes/FrecuentQuestions';
-import Geolocation from './componentes/Geolocation';
+import Contacto from './componentes/Contacto';
 import ReduxExample from './componentes/ReduxExample';
 
 function App() {
@@ -19,13 +19,13 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/products" element={<ItemListContainer />} />
-          <Route path='/products/:id' element={<ItemDetailContainer/>} />
-          <Route path='/cart' element={<ProductCart />} />
-          <Route path='/geolocation' element={<Geolocation />} />
+          <Route path="/suscripciones" element={<ItemListContainer />} />
+          <Route path='/suscripciones/:id' element={<ItemDetailContainer/>} />
+          <Route path='/contacto' element={<Contacto />} />
+          {/* <Route path='/cart' element={<ProductCart />} />
           <Route path='/faq' element={<FrecuentQuestions />} />
           <Route path='/checkout' element={<Checkout />} />
-          <Route path='/redux' element={<ReduxExample />} />
+          <Route path='/redux' element={<ReduxExample />} /> */}
         </Routes>
         <Footer />
       </BrowserRouter>

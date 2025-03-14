@@ -1,16 +1,16 @@
 import React from 'react'
 import Background from './Background'
-import FrecuentQuestions from './FrecuentQuestions'
 import ItemListContainer from './ItemListContainer'
-import Geolocation from './Geolocation'
+import Contacto from './Contacto'
+import Carrusel from './Carrusel'
 
 export const Home = () => {
   return (
     <div className='font'>
-        <Background />
+        {/* <Background /> */}
+        <Carrusel />
         <ItemListContainer />
-        <Geolocation />
-        <FrecuentQuestions />
+        <Contacto />
     </div>
   )
 }

@@ -53,11 +53,12 @@ return (
     </div>
     <div className="info info-small">
       <div className="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
-        <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl mb-5 title-item">{item.name}</h1>
+        <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl mb-5 title-item">Suscripción {item.name}</h1>
       </div>
       <div className="mt-4 lg:row-span-3 lg:mt-0 div-info">
         <h2 className="sr-only">Product information</h2>
-        <p className="text-2xl tracking-tight text-gray-900 mb-5 text-responsive">${item.price}</p>
+        <p className="text-2xl tracking-tight text-gray-900 mb-3 text-responsive line-through">${item.price?.toFixed(3)}</p>
+        <p className="text-3xl tracking-tight text-gray-900 mb-3 text-responsive">${item.discount?.toFixed(3)}</p>
         <div>
           <h3 className="sr-only">Description</h3>
           <div className="space-y-6">
@@ -70,7 +71,7 @@ return (
             <p className="text-sm text-gray-600">{item.details}</p>
           </div> */}
             
-          {isInCart ? (
+          {/* {isInCart ? (
             <div className="flex flex-col space-y-8 mt-10 mb-8 button-responsive">
               <Link to='/cart' className="btn btn-sm py-1 px-4 text-white bg-black rounded-none w-44 h-12">Ir al carrito</Link>
               <Link to='/products' className="text-black bg-white rounded-none w-40 h-9 text-center mt-buttons">Seguir comprando</Link>
@@ -78,7 +79,7 @@ return (
               :
             (<>
               <Counter onAdd={onAdd} stock={item.stock} />
-            </>)}
+            </>)} */}
         </div>
       </div>
     </div>
