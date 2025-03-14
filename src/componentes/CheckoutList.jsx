@@ -1,5 +1,7 @@
 import { useCart } from './context/CartContext'
 import { formatPrice } from './formatPrice'
+import React from 'react';
+
 
 export default function CheckoutList() {
 

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import { PRODUCTS } from "../data/products"
 import Loader from "./Loader"
 import WineCard from "./WineCard"
